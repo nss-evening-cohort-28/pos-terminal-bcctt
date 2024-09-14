@@ -18,7 +18,7 @@ const viewOrders = (array) => {
         </div>
         `;
   });
-  renderToDOM('#cardContainer', domString);
+  renderToDOM('#card-container', domString);
 };
 
 export default viewOrders;
