@@ -25,8 +25,8 @@ const navBar = () => {
     </form>
   </div>
 </nav>`;
-};
 
 renderToDom('#navigation', domString);
+};
 
 export default navBar;

@@ -1,6 +1,6 @@
 import logoutButton from '../components/logoutButton';
 import domBuilder from '../components/domBuilder';
-import navBar from '../components/navigationBar';
+import navBar from '../components/navigationBar'; 
 
 const startApp = () => {
   navBar(); //Adds the Navigation Bar
