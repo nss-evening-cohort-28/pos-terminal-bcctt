@@ -14,7 +14,7 @@ const viewOrders = (array) => {
             <a href="#" class="card-link">Details</a>
             <a href="#" class="card-link">Edit</a>
             <a href="#" class="card-link">Delete</a>
-            </div>
+          </div>
         </div>
         `;
   });
