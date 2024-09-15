@@ -1,11 +1,13 @@
 import renderToDom from '../utils/renderToDom';
 
 const navBar = () => {
-  const domString = `
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  let domString = '';
+  domString = `
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">
-    <img src="https://www.vecteezy.com/vector-art/37961188-pizza-tattoo-illustration-vector-design" width="30" height="30" alt="https://www.vecteezy.com/vector-art/23364228-cool-pizza-character"></img>
+    <img src="https://user-images.githubusercontent.com/29741570/205346767-a182560c-64a6-4cfa-80b3-0d64cf998242.png" width="30" height="30" alt="cool pizza character"></img>
   </a>
+  <div id="logoutBtn">TEST</div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -25,7 +27,7 @@ const navBar = () => {
     </form>
   </div>
 </nav>`;
-
+  
   renderToDom('#navigation', domString);
 };
 

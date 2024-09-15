@@ -14,11 +14,11 @@ const viewOrders = (array) => {
             <a href="#" class="card-link">Details</a>
             <a href="#" class="card-link">Edit</a>
             <a href="#" class="card-link">Delete</a>
-            </div>
+          </div>
         </div>
         `;
   });
-  renderToDOM('#cardContainer', domString);
+  renderToDOM('#card-container', domString);
 };
 
 export default viewOrders;
