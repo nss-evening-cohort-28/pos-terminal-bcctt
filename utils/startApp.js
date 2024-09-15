@@ -3,7 +3,7 @@ import domBuilder from '../components/domBuilder';
 import navBar from '../components/navigationBar';
 
 const startApp = () => {
-  domBuilder();
+  domBuilder(); // LOAD HTML SKELETON
   navBar(); // Adds the Navigation Bar
   logoutButton(); // ADD LOGOUT BUTTON COMPONENT
 };
