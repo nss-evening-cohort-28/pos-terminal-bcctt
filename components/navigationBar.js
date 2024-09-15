@@ -3,7 +3,7 @@ import renderToDom from '../utils/renderToDom';
 const navBar = () => {
   let domString = '';
   domString = `
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-5">
   <a class="navbar-brand" href="#">
     <img src="https://user-images.githubusercontent.com/29741570/205346767-a182560c-64a6-4cfa-80b3-0d64cf998242.png" width="30" height="30" alt="cool pizza character"></img>
   </a>
@@ -23,7 +23,6 @@ const navBar = () => {
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search"></input>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
     </form>
   </div>
 </nav>`;
