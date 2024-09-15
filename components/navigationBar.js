@@ -27,7 +27,7 @@ const navBar = () => {
     </form>
   </div>
 </nav>`;
-  
+
   renderToDom('#navigation', domString);
 };
 
