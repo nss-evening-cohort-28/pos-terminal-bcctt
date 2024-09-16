@@ -1,7 +1,8 @@
 import renderToDOM from '../utils/renderToDom';
 
 const homeScreen = () => {
-  const domString = `
+  let domString = '';
+  domString += `
     <div class="btn-group">
       <button type="button" id="viewOrder" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
         View Orders
@@ -14,7 +15,7 @@ const homeScreen = () => {
       </button>
     </div>`;
 
-  renderToDOM('#card-container', domString);
+  renderToDOM('#main-container', domString);
 };
 
 export default homeScreen;
