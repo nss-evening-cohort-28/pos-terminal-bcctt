@@ -3,6 +3,7 @@ import domBuilder from '../components/domBuilder';
 import navBar from '../components/navigationBar';
 import greetLoggedInUser from './greeting';
 import homeScreen from '../pages/homeSreen';
+import navigationEvents from '../events/navigationEvents';
 
 const startApp = () => {
   const imageId = document.querySelector('#landing-image');
@@ -15,6 +16,7 @@ const startApp = () => {
   greetLoggedInUser();
   logoutButton(); // ADD LOGOUT BUTTON COMPONENT
   homeScreen(); // BUTTON GROUP FOR HOME SCREEN After login
+  navigationEvents();
 };
 
 export default startApp;
