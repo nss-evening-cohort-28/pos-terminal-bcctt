@@ -7,7 +7,6 @@ body {
   color: white;
   text-align: center;
   margin-top: 100px;
-  
 }
 
 #landing-image{
@@ -17,4 +16,37 @@ body {
 
 #userGreeting{
   font-size: 2rem;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  gap: 3rem;
+}
+
+.btn-primary {
+  padding: 10px 100px;
+  border: none;
+}
+
+#viewOrder {
+  background-color: #28A745;
+}
+
+#createOrder {
+  background-color: #17A2B8;
+}
+
+#viewRevenue {
+  background-color: #FFC107;
+  color: #121212;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
