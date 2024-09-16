@@ -3,8 +3,8 @@
 
 
 body {
-  background-color: gray;
-  color: #2B2B2B;
+  background-color: #2B2B2B;
+  color: white;
   text-align: center;
   margin-top: 100px;
   
@@ -13,4 +13,8 @@ body {
 #landing-image{
   width: 335px;
   height: 404px;
+}
+
+#userGreeting{
+  font-size: 2rem;
 }
