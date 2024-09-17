@@ -5,7 +5,7 @@ const navBar = () => {
   domString = `
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-5">
   <a class="navbar-brand" href="#">
-    <img src="https://user-images.githubusercontent.com/29741570/205346767-a182560c-64a6-4cfa-80b3-0d64cf998242.png" width="30" height="30" alt="cool pizza character"></img>
+    <img id="homeLogo" src="https://user-images.githubusercontent.com/29741570/205346767-a182560c-64a6-4cfa-80b3-0d64cf998242.png" width="30" height="30" alt="cool pizza character"></img>
   </a>
   <div id="logoutBtn"></div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
