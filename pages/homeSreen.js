@@ -14,7 +14,7 @@ const homeScreen = () => {
     </button>
     </div>`;
 
-  renderToDOM('', domString);
+  renderToDOM('#main-container', domString);
 };
 
 export default homeScreen;
