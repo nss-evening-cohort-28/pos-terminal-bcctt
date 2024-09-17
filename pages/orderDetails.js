@@ -3,6 +3,7 @@ import renderToDOM from '../utils/renderToDom';
 
 const orderDetails = (array) => {
   clearDom();
+  let sum = 0;
   let domString = '';
   array.forEach((item) => {
     domString += `
@@ -15,7 +16,10 @@ const orderDetails = (array) => {
         </div>
     </div>
     `;
+    sum += item.price;
   });
+  const domStringSum = `<h1 id="orderSum">TOTAL: $${sum}</h1>`;
+  renderToDOM('#main-container', domStringSum);
   renderToDOM('#itemCard-container', domString);
 };
 
