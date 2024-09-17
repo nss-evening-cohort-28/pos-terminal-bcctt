@@ -21,6 +21,7 @@ const createOrderForm = (obj = {}) => {
       <input type="checkbox" class="form-check-input" id="orderType" ${obj.type ? 'checked' : ''}>
       <label class="form-check-label" for="orderType">In Person Order?</label>
     </div>
+    <button type="submit" class="btn btn-primary mb=3">Submit Order</button>    
   </form>
   `;
   renderToDOM('#form-container', domString);
