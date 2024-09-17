@@ -4,6 +4,8 @@ import navBar from '../components/navigationBar';
 import greetLoggedInUser from './greeting';
 import homeScreen from '../pages/homeSreen';
 import navigationEvents from '../events/navigationEvents';
+import domEvents from '../events/domEvents';
+import formEvents from '../events/formEvents';
 
 const startApp = () => {
   const imageId = document.querySelector('#landing-image');
@@ -12,6 +14,8 @@ const startApp = () => {
   imageId.parentNode.removeChild(imageId); // REMOVE LOGO IMAGE FROM DOM
 
   domBuilder(); // LOAD HTML SKELETON
+  domEvents(); // ADD EVENT LISTENER FOR DOM
+  formEvents(); // ADD EVENT LISTER FOR FORMS
   navBar(); // Adds the Navigation Bar
   greetLoggedInUser();
   logoutButton(); // ADD LOGOUT BUTTON COMPONENT

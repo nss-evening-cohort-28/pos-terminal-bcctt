@@ -6,7 +6,7 @@ const createOrderForm = (obj = {}) => {
   const domString = `
   <form id="${obj.firebaseKey ? `update-order--${obj.firebaseKey}` : 'submit-order'}" class"mb-4">
     <div class="mb-3">
-      <input type="email" class="form-control" id="word" placeholder="email@email.com" value="${obj.email || ''}" required></div>
+      <input type="email" class="form-control" id="orderEmail" placeholder="email@email.com" value="${obj.email || ''}" required></div>
     <div class="mb-3">
       <input type="text" class="form-control" id="orderName" rows="3" placeholder="Order Name" value="${obj.orderName || ''}"></input>
     </div>

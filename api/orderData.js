@@ -20,6 +20,7 @@ const getOrders = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// POST API FOR CREATING ORDERS
 const createOrder = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/orders.json`, {
     method: 'POST',
@@ -33,4 +34,18 @@ const createOrder = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getOrders, createOrder };
+// PATCH API FOR UPDATING ORDERS
+const updateOrder = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/orders/${payload.firebaseKey}.json`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application-json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
+export { getOrders, createOrder, updateOrder };
