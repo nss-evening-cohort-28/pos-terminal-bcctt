@@ -1,9 +1,10 @@
+import firebase from 'firebase';
 import client from '../utils/client';
 
 const endpoint = client.databaseURL;
 
 const getOrders = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/orders.json`, {
+  fetch(`${endpoint}/orders.json?orderBy="uid"&equalTo"${firebase.auth().currentUser.uid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -20,12 +21,24 @@ const getOrders = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// POST API FOR CREATING ORDERS
+const deleteOrder = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/orders/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+// CREATE ORDER
 const createOrder = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/orders.json`, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application-json',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(payload),
   })
@@ -34,12 +47,12 @@ const createOrder = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// PATCH API FOR UPDATING ORDERS
+// UPDATE ORDER
 const updateOrder = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/orders/${payload.firebaseKey}.json`, {
     method: 'PATCH',
     headers: {
-      'Content-Type': 'application-json',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(payload),
   })
@@ -48,4 +61,6 @@ const updateOrder = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getOrders, createOrder, updateOrder };
+export {
+  getOrders, deleteOrder, createOrder, updateOrder
+};
