@@ -2,10 +2,6 @@ import client from '../utils/client';
 
 const endpoint = client.databaseURL;
 
-const letMeExportWithoutDefault = () => {
-  console.warn('This is just here to avoid having to use export default since we know this file will have more than one function eventually. This is just to avoid refactoring down the line');
-};
-
 const getItems = () => new Promise((resolve, reject) => {
   fetch(`${endpoint}/items.json`, {
     method: 'GET',
@@ -24,4 +20,16 @@ const getItems = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { letMeExportWithoutDefault, getItems };
+const deleteItem = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/items.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+export { deleteItem, getItems };

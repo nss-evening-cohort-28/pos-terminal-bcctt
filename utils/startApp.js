@@ -1,5 +1,6 @@
 import logoutButton from '../components/logoutButton';
 import domBuilder from '../components/domBuilder';
+import domEvents from '../events/domEvents';
 import navBar from '../components/navigationBar';
 import greetLoggedInUser from './greeting';
 import homeScreen from '../pages/homeSreen';
@@ -12,6 +13,7 @@ const startApp = () => {
   imageId.parentNode.removeChild(imageId); // REMOVE LOGO IMAGE FROM DOM
 
   domBuilder(); // LOAD HTML SKELETON
+  domEvents(); // ADDS EVENT LISTENERS TO THE DOM
   navBar(); // Adds the Navigation Bar
   greetLoggedInUser();
   logoutButton(); // ADD LOGOUT BUTTON COMPONENT

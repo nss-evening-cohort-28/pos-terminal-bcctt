@@ -12,7 +12,7 @@ const orderDetails = (array) => {
             <h5 class="card-title">${item.itemName}</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">${item.price}</h6>
             <a href="#" class="card-link">Edit Item</a>
-            <a href="#" class="card-link">Delete Item</a>
+            <a id="delete-item" href="#" class="card-link">Delete Item</a>
         </div>
     </div>
     `;
