@@ -13,8 +13,8 @@ const viewOrders = (array) => {
             <p class="card-text">${order.phoneNum}</p>
             <p class="card-text">${order.email}</p>
             <p class="card-text">${order.type}</p>
-            <a href="#" class="card-link">Details</a>
-            <a href="#" class="card-link">Edit</a>
+            <a id="orderDetails" href="#" class="card-link">Details</a>
+            <a id="editOrder" href="#" class="card-link">Edit</a>
             <i id="delete-order-btn--${order.firebaseKey}"class="btn btn-danger">Delete</i>
           </div>
         </div>
