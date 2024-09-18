@@ -3,10 +3,12 @@ import viewOrders from '../pages/viewOrders';
 import { getItems } from '../api/itemData';
 import orderDetails from '../pages/orderDetails';
 
+
 import createOrderForm from '../forms/createOrderform';
 
 const domEvents = () => {
   document.querySelector('#app').addEventListener('click', (e) => {
+    
     // Click for delete order
     if (e.target.id.includes('delete-order')) {
       if (window.customConfirm('Want to delete?')) {
@@ -30,6 +32,7 @@ const domEvents = () => {
         });
       }
     }
+    
     // SERVE ADD ORDER FORM
     if (e.target.id.includes('createOrder')) {
       console.warn('CREATE BUTTON CLICKED');
