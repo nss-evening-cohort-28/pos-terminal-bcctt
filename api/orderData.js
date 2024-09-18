@@ -64,4 +64,3 @@ const updateOrder = (payload) => new Promise((resolve, reject) => {
 export {
   getOrders, deleteOrder, createOrder, updateOrder
 };
-
