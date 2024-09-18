@@ -10,7 +10,7 @@ const formEvents = (uid) => {
       const payload = {
         email: document.querySelector('#orderEmail').value,
         orderName: document.querySelector('#orderName').value,
-        pnoneNum: document.querySelector('#phoneNum').value,
+        phoneNum: document.querySelector('#phoneNum').value,
         status: document.querySelector('#orderStatus').checked,
         type: document.querySelector('#orderType').checked,
         uid
@@ -30,7 +30,7 @@ const formEvents = (uid) => {
       const payload = {
         email: document.querySelector('#orderEmail').value,
         orderName: document.querySelector('#orderName').value,
-        pnoneNum: document.querySelector('#phoneNum').value,
+        phoneNum: document.querySelector('#phoneNum').value,
         status: document.querySelector('#orderStatus').checked,
         type: document.querySelector('#orderType').checked,
         firebaseKey,
