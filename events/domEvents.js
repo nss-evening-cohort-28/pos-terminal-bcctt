@@ -2,29 +2,29 @@ import { getOrders, deleteOrder } from '../api/orderData';
 import viewOrders from '../pages/viewOrders';
 import { getItems } from '../api/itemData';
 import orderDetails from '../pages/orderDetails';
+import clearDom from '../utils/clearDom';
 
 const domEvents = () => {
-  document.querySelector('#main-container').addEventListener('click', (e) => {
-    // Click for delete order
-    if (e.target.id.includes('delete-order')) {
-      if (window.customConfirm('Want to delete?')) {
-        console.warn('CLICKED DELETE ORDER', e.target.id);
-        const [, firebaseKey] = (e.target.id.split('--'));
-
+  document.querySelector('#app').addEventListener('click', (e) => {
+    // Click event for deleting a tech
+    if (e.target.id.includes('delete-order-btn')) {
+      // eslint-disable-next-line no-alert
+      if (window.confirm('Want to delete?')) {
+        const [, firebaseKey] = e.target.id.split('--');
         deleteOrder(firebaseKey).then(() => {
+          clearDom();
           getOrders().then(viewOrders);
         });
       }
     }
 
-    // Click for delete item
-    if (e.target.id.includes('delete-item')) {
-      if (window.customConfirm('Want to delete?')) {
-        console.warn('CLICKED DELETE ITEM', e.target.id);
-        const [, firebaseKey] = (e.target.id.split('--'));
-
-        deleteOrder(firebaseKey).then(() => {
-          getItems().then(orderDetails);
+    // Click event for deleting an item
+    if (e.target.id.includes('delete-item-btn')) {
+      // eslint-disable-next-line no-alert
+      if (window.confirm('Want to delete?')) {
+        const [, firebaseKey] = e.target.id.split('--');
+        deleteItem(firebaseKey).then(() => {
+          orderDetails().then(getItems);
         });
       }
     }
