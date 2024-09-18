@@ -15,10 +15,10 @@ const navBar = () => {
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="#">View Orders <span class="sr-only">(current)</span></a>
+        <a id="viewOrdersNav" class="nav-link" href="#">View Orders<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Create an Order</a>
+        <a id="createOrderNav" class="nav-link" href="#">Create an Order</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

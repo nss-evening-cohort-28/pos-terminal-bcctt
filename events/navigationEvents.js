@@ -8,7 +8,7 @@ import greetLoggedInUser from '../utils/greeting';
 
 const navigationEvents = () => {
   document.querySelector('#app').addEventListener('click', (e) => {
-    if (e.target.id.includes('viewOrder')) {
+    if (e.target.id.includes('viewOrder' || 'viewOrdersNav')) {
       console.warn('clicked View Orders!');
       getOrders().then((data) => viewOrders(data));
     }

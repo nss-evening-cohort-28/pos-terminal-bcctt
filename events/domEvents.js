@@ -34,7 +34,7 @@ const domEvents = () => {
     }
 
     // SERVE ADD ORDER FORM
-    if (e.target.id.includes('createOrder')) {
+    if (e.target.id.includes('createOrder' || 'createOrder')) {
       console.warn('CREATE BUTTON CLICKED');
       createOrderForm();
     }
