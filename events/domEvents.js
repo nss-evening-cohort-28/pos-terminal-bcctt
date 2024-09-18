@@ -1,6 +1,6 @@
 import { getOrders, deleteOrder } from '../api/orderData';
 import viewOrders from '../pages/viewOrders';
-import { getItems } from '../api/itemData';
+import { getItems, deleteItem } from '../api/itemData';
 import orderDetails from '../pages/orderDetails';
 import clearDom from '../utils/clearDom';
 
@@ -14,7 +14,7 @@ const domEvents = () => {
       if (window.confirm('Want to delete?')) {
         console.warn('CLICKED DELETE ORDER', e.target.id);
         const [, firebaseKey] = (e.target.id.split('--'));
-        
+
         deleteOrder(firebaseKey).then(() => {
           clearDom();
           getOrders().then(viewOrders);
