@@ -9,7 +9,8 @@ const domEvents = () => {
   document.querySelector('#app').addEventListener('click', (e) => {
     // Click for delete order
     if (e.target.id.includes('delete-order')) {
-      if (window.customConfirm('Want to delete?')) {
+      // eslint-disable-next-line no-alert
+      if (window.confirm('Want to delete?')) {
         console.warn('CLICKED DELETE ORDER', e.target.id);
         const [, firebaseKey] = (e.target.id.split('--'));
 
@@ -21,7 +22,8 @@ const domEvents = () => {
 
     // Click for delete item
     if (e.target.id.includes('delete-item')) {
-      if (window.customConfirm('Want to delete?')) {
+      // eslint-disable-next-line no-alert
+      if (window.confirm('Want to delete?')) {
         console.warn('CLICKED DELETE ITEM', e.target.id);
         const [, firebaseKey] = (e.target.id.split('--'));
 

@@ -21,6 +21,7 @@ const getOrders = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// DELETE ORDER
 const deleteOrder = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/orders/${firebaseKey}.json`, {
     method: 'DELETE',
