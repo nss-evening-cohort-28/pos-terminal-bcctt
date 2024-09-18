@@ -36,6 +36,14 @@ body {
   background-color: #28A745;
 }
 
+#addItemBtn {
+  background-color: #28A745;
+}
+
+#goToPaymentsBtn {
+  background-color: #007BFF;
+}
+
 #createOrder {
   background-color: #17A2B8;
 }
@@ -57,6 +65,12 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  border-radius: 10px;
+}
+
+.itemCard-body {
+  padding: 1rem;
+  border-radius: 8px;
 }
 
 .card {
@@ -68,4 +82,5 @@ body {
   color: #121212;
   width: 80%;
   text-align: start;
+  border-radius: 8px;
 }
