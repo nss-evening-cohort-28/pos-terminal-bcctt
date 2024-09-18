@@ -2,6 +2,7 @@ import { getOrders, deleteOrder } from '../api/orderData';
 import viewOrders from '../pages/viewOrders';
 import { getItems } from '../api/itemData';
 import orderDetails from '../pages/orderDetails';
+import clearDom from '../utils/clearDom';
 
 import createOrderForm from '../forms/createOrderform';
 
@@ -13,8 +14,9 @@ const domEvents = () => {
       if (window.confirm('Want to delete?')) {
         console.warn('CLICKED DELETE ORDER', e.target.id);
         const [, firebaseKey] = (e.target.id.split('--'));
-
+        
         deleteOrder(firebaseKey).then(() => {
+          clearDom();
           getOrders().then(viewOrders);
         });
       }
@@ -27,7 +29,7 @@ const domEvents = () => {
         console.warn('CLICKED DELETE ITEM', e.target.id);
         const [, firebaseKey] = (e.target.id.split('--'));
 
-        deleteOrder(firebaseKey).then(() => {
+        deleteItem(firebaseKey).then(() => {
           getItems().then(orderDetails);
         });
       }
