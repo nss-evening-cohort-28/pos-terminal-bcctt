@@ -13,9 +13,11 @@ const startApp = (user) => {
   loginBtn.innerHTML = ''; // REMOVE LOGIN BUTTON FROM DOM
   imageId.parentNode.removeChild(imageId); // REMOVE LOGO IMAGE FROM DOM
 
+
   domBuilder(user); // LOAD HTML SKELETON
   domEvents(user); // ADDS EVENT LISTENERS TO THE DOM
   formEvents(user); // ADDS FORM EVENT LISTENERS TO THE DOM
+
   navBar(); // Adds the Navigation Bar
   greetLoggedInUser();
   logoutButton(); // ADD LOGOUT BUTTON COMPONENT
