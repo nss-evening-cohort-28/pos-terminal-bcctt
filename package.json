@@ -1,5 +1,5 @@
 {
-  "name": "Hip Hop Pizza POS",
+  "name": "HipHopPizzaPOS",
   "version": "1.0.0",
   "description": "",
   "main": "public/main.js",
@@ -9,7 +9,7 @@
     "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "Toren DeRamus",
+  "author": "Christina Vieau",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.2.0",
