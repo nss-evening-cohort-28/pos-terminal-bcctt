@@ -1,10 +1,9 @@
-import firebase from 'firebase';
 import client from '../utils/client';
 
 const endpoint = client.databaseURL;
 
-const getOrders = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/orders.json?orderBy="uid"&equalTo"${firebase.auth().currentUser.uid}`, {
+const getOrders = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/orders.json?orderBy="uid"&equalTo"${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

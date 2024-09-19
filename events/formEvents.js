@@ -1,8 +1,9 @@
+import firebase from 'firebase';
 import { createOrder, getOrders, updateOrder } from '../api/orderData';
 import viewOrders from '../pages/viewOrders';
 import clearDom from '../utils/clearDom';
 
-const formEvents = (uid) => {
+const formEvents = (user) => {
   document.querySelector('#app').addEventListener('submit', (e) => {
     e.preventDefault();
     // FORM CLICK EVENT FOR CREATING AN ORDER
@@ -13,13 +14,13 @@ const formEvents = (uid) => {
         phoneNum: document.querySelector('#phoneNum').value,
         status: document.querySelector('#orderStatus').checked,
         type: document.querySelector('#orderType').checked,
-        uid
+        uid: `${firebase.auth().currentUser.uid}`
       };
+
       createOrder(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
-
         updateOrder(patchPayload).then(() => {
-          getOrders(uid).then(viewOrders);
+          getOrders(user.uid).then(viewOrders);
         });
       });
     }
@@ -35,7 +36,7 @@ const formEvents = (uid) => {
         firebaseKey,
       };
       updateOrder(payload).then(() => {
-        getOrders(uid).then(viewOrders);
+        getOrders().then(viewOrders);
         clearDom();
       });
     }
