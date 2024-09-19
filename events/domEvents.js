@@ -6,7 +6,7 @@ import clearDom from '../utils/clearDom';
 
 import createOrderForm from '../forms/createOrderform';
 
-const domEvents = () => {
+const domEvents = (user) => {
   document.querySelector('#app').addEventListener('click', (e) => {
     // Click for delete order
     if (e.target.id.includes('delete-order')) {
@@ -17,7 +17,7 @@ const domEvents = () => {
 
         deleteOrder(firebaseKey).then(() => {
           clearDom();
-          getOrders().then(viewOrders);
+          getOrders(user.uid).then(viewOrders);
         });
       }
     }
