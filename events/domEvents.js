@@ -1,9 +1,8 @@
-import { getOrders, deleteOrder } from '../api/orderData';
+import { getOrders, deleteOrder, getSingleOrder } from '../api/orderData';
 import viewOrders from '../pages/viewOrders';
 import { getItems, deleteItem } from '../api/itemData';
 import orderDetails from '../pages/orderDetails';
 import clearDom from '../utils/clearDom';
-
 import createOrderForm from '../forms/createOrderform';
 
 const domEvents = (user) => {
@@ -17,7 +16,7 @@ const domEvents = (user) => {
 
         deleteOrder(firebaseKey).then(() => {
           clearDom();
-          getOrders().then(viewOrders);
+          getOrders(user.uid).then(viewOrders);
         });
       }
     }
@@ -31,6 +30,7 @@ const domEvents = (user) => {
 
         deleteItem(firebaseKey).then(() => {
           getItems(user.uid).then(orderDetails);
+          orderDetails().then(getItems);
         });
       }
     }
@@ -39,6 +39,14 @@ const domEvents = (user) => {
     if (e.target.id.includes('createOrder')) {
       console.warn('CREATE BUTTON CLICKED');
       createOrderForm();
+    }
+
+    // CLICK EVENT EDITING/UPDATING AN ORDER
+    if (e.target.id.includes('update-order')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      console.warn('EDIT BOOK', e.target.id);
+
+      getSingleOrder(firebaseKey).then((orderObj) => createOrderForm(orderObj));
     }
   });
 };

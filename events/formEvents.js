@@ -18,10 +18,11 @@ const formEvents = (user) => {
         type: document.querySelector('#orderType').checked,
         uid: firebase.auth().currentUser.uid
       };
+
       createOrder(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
-
         updateOrder(patchPayload).then(() => {
+
           getOrders(firebase.auth().currentUser.uid).then(viewOrders);
         });
       });
