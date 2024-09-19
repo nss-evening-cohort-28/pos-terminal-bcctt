@@ -29,13 +29,14 @@ const domEvents = (user) => {
         const [, firebaseKey] = (e.target.id.split('--'));
 
         deleteItem(firebaseKey).then(() => {
+          getItems(user.uid).then(orderDetails);
           orderDetails().then(getItems);
         });
       }
     }
 
     // SERVE ADD ORDER FORM
-    if (e.target.id.includes('createOrder' || 'createOrder')) {
+    if (e.target.id.includes('createOrder')) {
       console.warn('CREATE BUTTON CLICKED');
       createOrderForm();
     }
