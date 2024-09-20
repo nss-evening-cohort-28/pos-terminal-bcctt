@@ -8,22 +8,19 @@ const formEvents = (user) => {
     e.preventDefault();
     // FORM CLICK EVENT FOR CREATING AN ORDER
     if (e.target.id.includes('submit-order')) {
-      console.warn('submit order button clicked');
-      console.warn(firebase.auth().currentUser.uid);
       const payload = {
         email: document.querySelector('#orderEmail').value,
         orderName: document.querySelector('#orderName').value,
         phoneNum: document.querySelector('#phoneNum').value,
         status: document.querySelector('#orderStatus').checked,
         type: document.querySelector('#orderType').checked,
-        uid: firebase.auth().currentUser.uid
+        uid: `${firebase.auth().currentUser.uid}`
       };
 
       createOrder(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateOrder(patchPayload).then(() => {
-
-          getOrders(firebase.auth().currentUser.uid).then(viewOrders);
+          getOrders(user.uid).then(viewOrders);
         });
       });
     }
@@ -39,7 +36,7 @@ const formEvents = (user) => {
         firebaseKey,
       };
       updateOrder(payload).then(() => {
-        getOrders(user.uid).then(viewOrders);
+        getOrders().then(viewOrders);
         clearDom();
       });
     }
