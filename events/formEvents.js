@@ -1,7 +1,9 @@
 import firebase from 'firebase';
 import { createOrder, getOrders, updateOrder } from '../api/orderData';
 import viewOrders from '../pages/viewOrders';
+import viewItem from '../pages/viewItem';
 import clearDom from '../utils/clearDom';
+import { createItem, getItems, updateItem } from '../api/itemData';
 
 const formEvents = (user) => {
   document.querySelector('#app').addEventListener('submit', (e) => {
@@ -38,6 +40,22 @@ const formEvents = (user) => {
       updateOrder(payload).then(() => {
         getOrders().then(viewOrders);
         clearDom();
+      });
+    }
+
+    // FORM CLICK EVENT FOR CREATING AN ORDER
+    if (e.target.id.includes('submit-item')) {
+      const payload = {
+        itemName: document.querySelector('#itemName').value,
+        price: document.querySelector('#itemPrice').value,
+        uid: `${firebase.auth().currentUser.uid}`
+      };
+
+      createItem(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+        updateItem(patchPayload).then(() => {
+          getItems(user.uid).then(viewItem);
+        });
       });
     }
   });
