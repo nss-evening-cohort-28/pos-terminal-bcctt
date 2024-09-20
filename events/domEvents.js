@@ -4,6 +4,7 @@ import { getItems, deleteItem } from '../api/itemData';
 import orderDetails from '../pages/orderDetails';
 import clearDom from '../utils/clearDom';
 import createOrderForm from '../forms/createOrderform';
+import createItemForm from '../forms/createItemForm';
 
 const domEvents = (user) => {
   document.querySelector('#app').addEventListener('click', (e) => {
@@ -36,8 +37,12 @@ const domEvents = (user) => {
 
     // SERVE ADD ORDER FORM
     if (e.target.id.includes('createOrder' || 'createOrder')) {
-      console.warn('CREATE BUTTON CLICKED');
       createOrderForm();
+    }
+
+    // SERVE ADD ITEM FORM
+    if (e.target.id.includes('addItemBtn')) {
+      createItemForm();
     }
 
     // CLICK EVENT EDITING/UPDATING AN ORDER

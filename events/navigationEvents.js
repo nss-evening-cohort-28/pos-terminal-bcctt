@@ -15,7 +15,7 @@ const navigationEvents = (user) => {
 
     if (e.target.id.includes('orderDetails')) {
       console.warn('clicked order details!');
-      getItems().then((data) => orderDetails(data));
+      getItems(user.uid).then((data) => orderDetails(data));
     }
 
     if (e.target.id.includes('homeLogo')) { // This allows the user to click the logo in the navbar to return to home screen
