@@ -4,11 +4,11 @@
 <image src="https://user-images.githubusercontent.com/29741570/205346767-a182560c-64a6-4cfa-80b3-0d64cf998242.png" style="height:300px;"></image></div>
 
 ##Built With
-[image](https://github.com/user-attachments/assets/db888957-f59a-413b-88f8-f7c9df6239c2)
-[image](https://res.cloudinary.com/postman/image/upload/t_team_logo/v1629869194/team/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8)
-[image](https://firebase.google.com/static/images/brand-guidelines/logo-vertical.png)
-[image](https://cdn.holistics.io/logo-dbdiagram-notext.ico)
-[image](![image](https://github.com/user-attachments/assets/9bf9193e-eccc-489e-8fa0-504c0eaeab97)
+![image](https://github.com/user-attachments/assets/db888957-f59a-413b-88f8-f7c9df6239c2)
+![image](https://res.cloudinary.com/postman/image/upload/t_team_logo/v1629869194/team/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8)
+![image](https://firebase.google.com/static/images/brand-guidelines/logo-vertical.png)
+![image](https://cdn.holistics.io/logo-dbdiagram-notext.ico)
+![image](![image](https://github.com/user-attachments/assets/9bf9193e-eccc-489e-8fa0-504c0eaeab97)
 
 
 ## Getting Started
