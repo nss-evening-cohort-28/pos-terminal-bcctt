@@ -3,25 +3,19 @@
 
 <image src="https://user-images.githubusercontent.com/29741570/205346767-a182560c-64a6-4cfa-80b3-0d64cf998242.png" style="height:300px;"></image></div>
 
-##Built With
-![image](https://github.com/user-attachments/assets/db888957-f59a-413b-88f8-f7c9df6239c2)
-![image](https://res.cloudinary.com/postman/image/upload/t_team_logo/v1629869194/team/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8)
-![image](https://firebase.google.com/static/images/brand-guidelines/logo-vertical.png)
-![image](https://cdn.holistics.io/logo-dbdiagram-notext.ico)
-![image](![image](https://github.com/user-attachments/assets/9bf9193e-eccc-489e-8fa0-504c0eaeab97)
-
-
-## Getting Started
+## Overview
 We have built a website for Hip Hop Pizza and Wangs so you are able to have a database to create, store, delete, update and access your orders. With our app you will also be able to see the total revenue and tips that you have made along with a breakdown of the payment methods and the total or walk in orders versus the call in orders.
 
-* **Postman Collection** - Create a postman collection to store and test out all of your API calls.
+* **Postman Collection** - 
 * **[Wireframes](https://www.figma.com/file/4y3EZddALuBR3ouSEM57Np/MVP?node-id=0%3A1)** - This is the basic MVP wireframe. You can choose to style how you wish.
-* **Flowchart** - Plan out the flow of your data through the application
-* **Github Issue Tickets** - Using the Project Instructions as a guide, create issue tickets for this project’s work.
-* **Github Milestones** - Separate those issue tickets into Milestones to plan out the work.
+* **Flowchart** - https://dbdiagram.io/d/Hip-Hop-Pizza-66e377f96dde7f4149f559ff
+* ![Screenshot 2024-09-21 122118](https://github.com/user-attachments/assets/317a17d5-2b52-41df-b79f-83fc034173c3)
 
-## Definition of Done
+* **Deployed Project Link ** - Using the Project Instructions as a guide, create issue tickets for this project’s work.
+* **Github Project Board** - (https://github.com/orgs/nss-evening-cohort-28/projects/13).
 
+## Description
+The user of my application is a small business owner who needs a better way to track and manage their orders. A user 
 Do not submit this project until all of the following are complete:
 
 1. All items are completed in getting started
