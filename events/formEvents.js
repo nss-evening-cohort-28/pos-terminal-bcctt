@@ -27,6 +27,7 @@ const formEvents = (user) => {
       });
     }
 
+    // FORM EVENT FOR UPDATING AN ITEM
     if (e.target.id.includes('update-order')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
@@ -43,7 +44,7 @@ const formEvents = (user) => {
       });
     }
 
-    // FORM CLICK EVENT FOR CREATING AN ORDER
+    // FORM CLICK EVENT FOR CREATING AN ITEM
     if (e.target.id.includes('submit-item')) {
       const payload = {
         itemName: document.querySelector('#itemName').value,
@@ -58,6 +59,13 @@ const formEvents = (user) => {
         });
       });
     }
+
+    // FORM EVENT FOR CREATIG AN ORDER ITEM
+    // if (e.target.id.includes('submit-item-selection')) {
+    //   const payload = {
+
+    //   }
+    // }
   });
 };
 

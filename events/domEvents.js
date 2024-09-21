@@ -4,6 +4,7 @@ import { getItems, deleteItem } from '../api/itemData';
 import orderDetails from '../pages/orderDetails';
 import clearDom from '../utils/clearDom';
 import createOrderForm from '../forms/createOrderform';
+import selectItemForm from '../forms/selectItemForm';
 import createItemForm from '../forms/createItemForm';
 
 const domEvents = (user) => {
@@ -42,7 +43,7 @@ const domEvents = (user) => {
 
     // SERVE ADD ITEM FORM
     if (e.target.id.includes('addItemBtn')) {
-      createItemForm();
+      selectItemForm();
     }
 
     // CLICK EVENT EDITING/UPDATING AN ORDER
@@ -51,6 +52,10 @@ const domEvents = (user) => {
       console.warn('EDIT BOOK', e.target.id);
 
       getSingleOrder(firebaseKey).then((orderObj) => createOrderForm(orderObj));
+    }
+
+    if (e.target.id.includes('createItemNav')) {
+      createItemForm();
     }
   });
 };

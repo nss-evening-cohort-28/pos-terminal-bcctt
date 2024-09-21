@@ -20,6 +20,9 @@ const navBar = () => {
       <li class="nav-item">
         <a id="createOrderNav" class="nav-link" href="#">Create an Order</a>
       </li>
+      <li class="nav-item">
+        <a id="createItemNav" class="nav-link" href="#">Create an Item</a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search"></input>
