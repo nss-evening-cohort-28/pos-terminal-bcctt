@@ -16,6 +16,7 @@ We have built a website for Hip Hop Pizza and Wangs so you are able to have a da
 
 ## Description
 The user of my application is a small business owner who needs a better way to track and manage their orders. A user 
+
 Do not submit this project until all of the following are complete:
 
 1. All items are completed in getting started
