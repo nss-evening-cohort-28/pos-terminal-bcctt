@@ -64,12 +64,24 @@ const domEvents = (user) => {
       if (window.confirm('Close order?')) {
         console.warn('CLICKED CLOSE ORDER', e.target.id);
 
-        closeOrder(firebaseKey).then(() => {
-          getRevenue().then(showRevenue);
-        });
+        document.getElementById('status').value;
+        changedviewOrder.status := !viewOrders.status
+        }
       }
-    }
-  });
-};
+    })
+  };  
+    // closeOrder(firebaseKey).then(() => {
+    // console.warn('Changed to false?')
+    // getRevenue().then(showRevenue);
+
+    //  });// function closeOrder() {
+    //   
+    //   if (order.status === 'true') {
+    //     document.getElementsByTagName('h6').status = 'false';
+    //   }
+    //   viewOrders();
+    // }
+  
+
 
 export default domEvents;
