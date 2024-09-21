@@ -13,7 +13,7 @@ const viewOrders = (array) => {
             <p class="card-text">${order.phoneNum}</p>
             <p class="card-text">${order.email}</p>
             <p class="card-text">${order.type === true ? 'Call in Order' : 'Walk-in Order'}</p>
-            <a id="orderDetails" href="#" class="card-link">Details</a>
+            <a id="orderDetails--${order.firebaseKey}" href="#" class="card-link">Details</a>
             <a id="update-order-btn--${order.firebaseKey}" href="#" class="card-link">Edit</a>
             <a id="delete-order-btn--${order.firebaseKey}" href="#" class="card-link">Delete</a>
           </div>
