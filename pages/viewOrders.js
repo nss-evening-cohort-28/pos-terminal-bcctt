@@ -23,4 +23,14 @@ const viewOrders = (array) => {
   renderToDOM('#card-container', domString);
 };
 
+function closeOrder() {
+  var closed =document.getElementById("status");
+  if (closed.status == "true") {
+    co
+  }
+ 
+
+closeOrder(firebaseKey).then(() => {
+  getRevenue().then(showRevenue);
+
 export default viewOrders;

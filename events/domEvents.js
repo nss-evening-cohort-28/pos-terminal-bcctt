@@ -4,6 +4,7 @@ import { getItems, deleteItem } from '../api/itemData';
 import orderDetails from '../pages/orderDetails';
 import clearDom from '../utils/clearDom';
 import createOrderForm from '../forms/createOrderform';
+import paymentTypeForm from '../forms/closeOrder';
 
 const domEvents = (user) => {
   document.querySelector('#app').addEventListener('click', (e) => {
@@ -46,6 +47,27 @@ const domEvents = (user) => {
       console.warn('EDIT BOOK', e.target.id);
 
       getSingleOrder(firebaseKey).then((orderObj) => createOrderForm(orderObj));
+    }
+
+    // CLICK EVENT FOR GO TO PAYMENT BUTTON
+    if (e.target.id.includes('goToPaymentsBtn')) {
+      paymentTypeForm();
+      // const [, firebaseKey] = e.target.id.split('--');
+      // console.warn('Go To Payment', e.target.id);
+
+      // getSingleOrder(firebaseKey).then((orderObj) => paymentTypeForm(orderObj));
+    }
+
+    // CLICK EVENT FOR CLOSE ORDER BUTTON
+    if (e.target.id.includes('close-order')) {
+      // eslint-disable-next-line no-alert
+      if (window.confirm('Close order?')) {
+        console.warn('CLICKED CLOSE ORDER', e.target.id);
+
+        closeOrder(firebaseKey).then(() => {
+          getRevenue().then(showRevenue);
+        });
+      }
     }
   });
 };
